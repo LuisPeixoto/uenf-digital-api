@@ -6,7 +6,7 @@ class NotificationService {
     async sendNotification({ title, description }) {
         var notification = {
             'title': fixTextFormat(title),
-            'text': String(fixTextFormat(description).split('.', 1)),
+            'body': fixTextFormat(description)
         }
 
         var notification_body = {
