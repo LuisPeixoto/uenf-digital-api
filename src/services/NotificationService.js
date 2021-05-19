@@ -6,7 +6,11 @@ class NotificationService {
     async sendNotification({ title, description }) {
         var notification = {
             'title': fixTextFormat(title),
+<<<<<<< HEAD
             'text': String(fixTextFormat(description).split('.', 1)),
+=======
+            'body': fixTextFormat(description)
+>>>>>>> d375279 (corrected the error caused by the loop in the mongoDB atlas and removed from the click action in the notification)
         }
 
         var notification_body = {
